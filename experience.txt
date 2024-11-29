@@ -30,7 +30,7 @@ Proficiently create a variety of financial documents, including bills, invoices,
 Identify discrepancies in ledgers and accounts, track them to their source, and implement corrective measures. Additionally, manage payroll activities, coordinate payment details with external service providers, and generate daily reports for both management and team members to ensure transparency and informed decision-making.
 
 title : Assistant accountant
-company: smartpalikaaaaaa
+company: Pioneer Multipurpose Cooperative Limited 
 from : July,2019
 to : September,2021
 desc : Maintain precise records for daily transactions, ensuring accuracy and completeness in financial documentation.
