@@ -1,15 +1,33 @@
 ## NOte : use one line space after adding a skill
-topic: Ability to group quickly and adopt a flexible environment
-sub-topic: 
+topic: Project Management
+sub-topic:  Proven ability to lead diverse teams and manage end-to-end project delivery.
 
-topic:  Interpersonal skills including decision making and fast learner
-sub-topic: 
+topic:  HR Expertise
+sub-topic:Proficient in HR policies, talent acquisition, and fostering employee engagement. 
 
-topic: Up to date with modern accounting tools and software
-sub-topic: 
+topic: Leadership
+sub-topic: Experienced in leading teams, managing volunteers, and promoting collaboration.
 
-topic:  Interest on group building and team work
-sub-topic:
+topic:  Effective Communication
+sub-topic: Adept at building relationships, resolving conflicts, and engaging stakeholders.
 
-topic: Better communication skills with proper leadership approaches
-sub-topic:
+topic: Problem-Solving
+sub-topic: Analytical thinker with a knack for finding effective solutions to challenges.
+
+topic: Tech Savvy
+sub-topic:Proficient in MS Office, accounting software, and digital tools for project tracking.
+
+topic:Strategic Insights
+sub-topic:Adept in business modeling and aligning operations with organizational goals.
+
+topic:Community Impact
+sub-topic:Strong background in social initiatives, fundraising, and volunteer management.
+
+topic: Analytical Thinking
+sub-topic: Capable of interpreting data to drive strategic decisions and solve complex problems.
+
+topic:Stakeholder CollaborationEx
+sub-topic: Epert in facilitating collaboration between clients, teams, and management.
+
+topic:Lifelong Learner
+sub-topic:Certified in leadership, incubation, and capacity-building programs.
