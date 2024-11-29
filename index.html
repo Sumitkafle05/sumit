@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sumit Kafle - Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    /* Additional Custom Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    .fade-in {
+      animation: fadeIn 1s ease-in-out;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <!-- Header -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center py-4 px-6">
+      <h1 class="text-2xl font-bold text-gray-800">Sumit Kafle</h1>
+      <nav>
+        <ul class="flex space-x-6">
+          <li><a href="#about" class="hover:text-blue-500">About</a></li>
+          <li><a href="#skills" class="hover:text-blue-500">Skills</a></li>
+          <li><a href="#experience" class="hover:text-blue-500">Experience</a></li>
+          <li><a href="#contact" class="hover:text-blue-500">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="bg-gray-100 py-20 text-center fade-in">
+    <div class="container mx-auto">
+      <h2 class="text-4xl font-extrabold mb-4">Empowering Organizations</h2>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        Project Coordinator | Finance & HR Expertise
+      </p>
+      <button class="mt-6 px-6 py-3 bg-blue-500 text-white font-bold rounded-full hover:bg-blue-600">
+        Download Resume
+      </button>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20">
+    <div class="container mx-auto">
+      <h3 class="text-3xl font-bold mb-6 text-center">About Me</h3>
+      <p class="text-gray-600 max-w-3xl mx-auto text-center">
+        I am a Master's student in Business Administration specializing in Finance, with over a year of cross-functional 
+        experience in project management, HR, and finance. My goal is to leverage my expertise to drive strategic objectives.
+      </p>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="bg-gray-100 py-20">
+    <div class="container mx-auto">
+      <h3 class="text-3xl font-bold mb-6 text-center">Skills</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded shadow hover:shadow-lg">
+          <h4 class="text-xl font-bold">Leadership</h4>
+          <p class="text-gray-600">Effective team building and decision-making skills.</p>
+        </div>
+        <div class="bg-white p-6 rounded shadow hover:shadow-lg">
+          <h4 class="text-xl font-bold">Accounting Tools</h4>
+          <p class="text-gray-600">Proficiency in modern accounting software and tools.</p>
+        </div>
+        <div class="bg-white p-6 rounded shadow hover:shadow-lg">
+          <h4 class="text-xl font-bold">Communication</h4>
+          <p class="text-gray-600">Interpersonal skills and professional correspondence.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="py-20">
+    <div class="container mx-auto">
+      <h3 class="text-3xl font-bold mb-6 text-center">Professional Experience</h3>
+      <div class="space-y-8">
+        <!-- Job 1 -->
+        <div class="bg-white p-6 rounded shadow-md hover:shadow-lg">
+          <h4 class="text-2xl font-bold">Project Coordinator</h4>
+          <p class="text-gray-600">Smartpalika Pvt.Ltd. | May 2023 - Present</p>
+          <ul class="mt-4 list-disc ml-6 text-gray-600">
+            <li>Lead and manage comprehensive project initiatives.</li>
+            <li>Collaborate with multidisciplinary teams to enhance efficiency.</li>
+          </ul>
+        </div>
+        <!-- Job 2 -->
+        <div class="bg-white p-6 rounded shadow-md hover:shadow-lg">
+          <h4 class="text-2xl font-bold">HR Officer</h4>
+          <p class="text-gray-600">Cellapp Pvt.Ltd. | Jan 2024 - Present</p>
+          <ul class="mt-4 list-disc ml-6 text-gray-600">
+            <li>Develop HR policies and oversee recruitment processes.</li>
+            <li>Support organizational goals and employee satisfaction.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="bg-gray-100 py-20">
+    <div class="container mx-auto text-center">
+      <h3 class="text-3xl font-bold mb-6">Contact Me</h3>
+      <p class="text-gray-600 mb-6">Feel free to reach out via email or phone.</p>
+      <p class="text-gray-800 font-bold">Email: sumitkafle05@gmail.com</p>
+      <p class="text-gray-800 font-bold">Phone: +977 9868644055</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-6">
+    <div class="container mx-auto text-center">
+      <p>&copy; 2024 Sumit Kafle. All Rights Reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
