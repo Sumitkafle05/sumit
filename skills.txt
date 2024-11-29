@@ -2,14 +2,14 @@
 topic: Ability to group quickly and adopt a flexible environment
 sub-topic: 
 
+topic:  Interpersonal skills including decision making and fast learner
+sub-topic: 
 
-topic: React
-sub-topic: React is a JavaScript library for building user interfaces, maintained by Facebook and a community of developers.
+topic: Up to date with modern accounting tools and software
+sub-topic: 
 
+topic:  Interest on group building and team work
+sub-topic:
 
-topic: React
-sub-topic: React is a JavaScript library for building user interfaces, maintained by Facebook and a community of developers.
-
-
-topic: React
-sub-topic: React is a JavaScript library for building user interfaces, maintained by Facebook and a community of developers.
+topic: Better communication skills with proper leadership approaches
+sub-topic:
