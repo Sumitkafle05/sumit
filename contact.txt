@@ -1,4 +1,4 @@
-email : example@example.com
-phone : +1 234 567 890
-address : Bhaktapur
+email : sumitkafle05@gmail.com
+phone : 9868644055
+address : 
 social Media : Twitter - @username, LinkedIn - @username
