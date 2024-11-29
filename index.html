@@ -6,7 +6,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sumit Kafle - Portfolio</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Parkinsans:wght@300..800&display=swap"
+    rel="stylesheet">
   <style>
+    .parkinsans-snype-thick {
+      font-family: "Parkinsans", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 800;
+      font-style: bold;
+    }
+
+    .parkinsans-snype {
+      font-family: "Parkinsans", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 100;
+      font-style: bold;
+    }
+
+
     /* Additional Custom Animations */
     @keyframes fadeIn {
       from {
@@ -59,13 +79,13 @@
   <!-- Header -->
   <header class="bg-white shadow-md sticky top-0 z-50">
     <div class="container mx-auto flex justify-between items-center py-4 px-6">
-      <h1 class="text-2xl font-bold text-gray-800">Sumit Kafle</h1>
+      <h1 class="text-2xl font-bold text-gray-800 parkinsans-snype-thick">Sumit Kafle</h1>
       <nav>
         <ul class="flex space-x-6">
-          <li><a href="#about" class="hover:text-blue-500">About</a></li>
-          <li><a href="#skills" class="hover:text-blue-500">Skills</a></li>
-          <li><a href="#experience" class="hover:text-blue-500">Experience</a></li>
-          <li><a href="#contact" class="hover:text-blue-500">Contact</a></li>
+          <li><a href="#about" class="hover:text-blue-500 parkinsans-snype-thick">About</a></li>
+          <li><a href="#skills" class="hover:text-blue-500 parkinsans-snype-thick">Skills</a></li>
+          <li><a href="#experience" class="hover:text-blue-500 parkinsans-snype-thick">Experience</a></li>
+          <li><a href="#contact" class="hover:text-blue-500 parkinsans-snype-thick">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -74,9 +94,9 @@
   <!-- Hero Section -->
   <section class="bg-gray-100 py-20 text-center fade-in">
     <div class="container mx-auto">
-      <h2 class="text-4xl font-extrabold mb-4">Empowering Organizations</h2>
+      <h2 class="text-4xl font-extrabold mb-4 parkinsans-snype">Empowering Organizations</h2>
       <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-        <span class="typewriter">Project Coordinator | Finance & HR Expertise</span>
+        <span class="typewriter parkinsans-snype">Project Coordinator | Finance & HR Expertise</span>
       </p>
       <button class="mt-6 px-6 py-3 bg-blue-500 text-white font-bold rounded-full hover:bg-blue-600">
         Download Resume
@@ -87,11 +107,9 @@
   <!-- About Section -->
   <section id="about" class="py-20">
     <div class="container mx-auto">
-      <h3 class="text-3xl font-bold mb-6 text-center">About Me</h3>
-      <p class="text-gray-600 max-w-3xl mx-auto text-center">
-        I am a Master's student in Business Administration specializing in Finance, with over a year of cross-functional
-        experience in project management, HR, and finance. My goal is to leverage my expertise to drive strategic
-        objectives.
+      <h3 class="text-3xl font-bold mb-6 text-center parkinsans-snype-thick">ABOUT ME</h3>
+      <p class="text-gray-600 max-w-3xl mx-auto text-center" id="about-content">
+
       </p>
     </div>
   </section>
@@ -99,20 +117,9 @@
   <!-- Skills Section -->
   <section id="skills" class="bg-gray-100 py-20">
     <div class="container mx-auto">
-      <h3 class="text-3xl font-bold mb-6 text-center">Skills</h3>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="bg-white p-6 rounded shadow hover:shadow-lg">
-          <h4 class="text-xl font-bold">Leadership</h4>
-          <p class="text-gray-600">Effective team building and decision-making skills.</p>
-        </div>
-        <div class="bg-white p-6 rounded shadow hover:shadow-lg">
-          <h4 class="text-xl font-bold">Accounting Tools</h4>
-          <p class="text-gray-600">Proficiency in modern accounting software and tools.</p>
-        </div>
-        <div class="bg-white p-6 rounded shadow hover:shadow-lg">
-          <h4 class="text-xl font-bold">Communication</h4>
-          <p class="text-gray-600">Interpersonal skills and professional correspondence.</p>
-        </div>
+      <h3 class="text-3xl font-bold mb-6 text-center parkinsans-snype-thick">SKILLS</h3>
+      <div id="skills-container" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Dynamic Skill Cards Will Be Injected Here -->
       </div>
     </div>
   </section>
@@ -120,46 +127,190 @@
   <!-- Experience Section -->
   <section id="experience" class="py-20">
     <div class="container mx-auto">
-      <h3 class="text-3xl font-bold mb-6 text-center">Professional Experience</h3>
-      <div class="space-y-8">
-        <!-- Job 1 -->
-        <div class="bg-white p-6 rounded shadow-md hover:shadow-lg">
-          <h4 class="text-2xl font-bold">Project Coordinator</h4>
-          <p class="text-gray-600">Smartpalika Pvt.Ltd. | May 2023 - Present</p>
-          <ul class="mt-4 list-disc ml-6 text-gray-600">
-            <li>Lead and manage comprehensive project initiatives.</li>
-            <li>Collaborate with multidisciplinary teams to enhance efficiency.</li>
-          </ul>
-        </div>
-        <!-- Job 2 -->
-        <div class="bg-white p-6 rounded shadow-md hover:shadow-lg">
-          <h4 class="text-2xl font-bold">HR Officer</h4>
-          <p class="text-gray-600">Cellapp Pvt.Ltd. | Jan 2024 - Present</p>
-          <ul class="mt-4 list-disc ml-6 text-gray-600">
-            <li>Develop HR policies and oversee recruitment processes.</li>
-            <li>Support organizational goals and employee satisfaction.</li>
-          </ul>
-        </div>
-      </div>
+      <h3 class="text-3xl font-bold mb-6 text-center parkinsans-snype-thick">PROFESSIONAL EXPERIENCE</h3>
+      <div id="experience-container" class="space-y-8"></div>
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="bg-gray-100 py-20">
+  <section id="contact" class="py-20 bg-gray-50">
     <div class="container mx-auto text-center">
-      <h3 class="text-3xl font-bold mb-6">Contact Me</h3>
-      <p class="text-gray-600 mb-6">Feel free to reach out via email or phone.</p>
-      <p class="text-gray-800 font-bold">Email: sumitkafle05@gmail.com</p>
-      <p class="text-gray-800 font-bold">Phone: +977 9868644055</p>
+      <h3 class="text-3xl font-bold mb-6 parkinsans-snype-thick">CONTACT INFORMATION</h3>
+      <p class="text-gray-600 mb-6 parkinsans-snype">Feel free to reach out via email or phone.</p>
+      <div id="contact-container" class="space-y-4 parkinsans-snype"></div>
+      <!-- This will hold dynamic content -->
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="bg-gray-800 text-white py-6">
-    <div class="container mx-auto text-center">
-      <p>&copy; 2024 Sumit Kafle. All Rights Reserved.</p>
+    <div class="container mx-auto text-center parkinsans-snype">
+      <p>&copy; 2024 Sumit Kafle. All Rights Reserved.</p><span title="">Powered By <a href="https://snyype.github.io"
+          target="_blank">snype</a></span>
     </div>
   </footer>
+
+
+  <script>
+
+    // Fetch and process the skills.txt file
+    fetch('./skills.txt')
+      .then(response => response.text())
+      .then(data => {
+        const parseSkills = (skillsString) => {
+          const skills = [];
+          const entries = skillsString.trim().split(/\n\s*\n/); // Split blocks by blank lines
+
+          entries.forEach(entry => {
+            const lines = entry.split('\n');
+            const skill = {};
+            lines.forEach(line => {
+              const [key, value] = line.split(':').map(part => part.trim());
+              if (key && value) skill[key.toLowerCase()] = value;
+            });
+            if (Object.keys(skill).length) skills.push(skill);
+          });
+
+          return skills;
+        };
+
+        const skills = parseSkills(data);
+        const skillsContainer = document.getElementById('skills-container');
+
+        skills.forEach(skill => {
+          const skillCard = document.createElement('div');
+          skillCard.className = 'bg-white p-6 rounded shadow hover:shadow-lg';
+
+          skillCard.innerHTML = `
+            <h4 class="text-xl font-bold bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-blue-400 border border-blue-400">${skill.topic}</h4>
+            <h4 class="text-xl font-bold px-1">-----------------------------------------</h4>
+            <p class="text-gray-600 px-1">${skill['sub-topic']}</p>
+          `;
+
+          skillsContainer.appendChild(skillCard);
+        });
+      })
+      .catch(error => console.error('Error fetching skills.txt:', error));
+
+
+
+
+    ///experience
+
+    fetch('./experience.txt')
+      .then(response => {
+        if (!response.ok) throw new Error(`Network response was not ok: ${response.statusText}`);
+        return response.text();
+      })
+      .then(data => {
+        // console.log('Raw experience data:', data); // Debug raw file content
+
+        const parseExperience = (expString) => {
+          const experiences = [];
+          const entries = expString.trim().split(/\n\s*\n/); // Split blocks by blank lines
+          // console.log('Entries:', entries); // Debug parsed blocks
+
+          entries.forEach(entry => {
+            const lines = entry.split('\n');
+            const experience = {};
+            lines.forEach(line => {
+              const [key, value] = line.split(':').map(part => part.trim());
+              if (key && value) experience[key.toLowerCase()] = value;
+            });
+            // console.log('Parsed experience:', experience); // Debug each parsed experience
+            if (Object.keys(experience).length) experiences.push(experience);
+          });
+
+          return experiences;
+        };
+
+        const experiences = parseExperience(data);
+        // console.log('Parsed experiences:', experiences); // Debug final parsed array
+
+        const experienceContainer = document.getElementById('experience-container');
+
+        experiences.forEach(exp => {
+          const expCard = document.createElement('div');
+          expCard.className = 'bg-white p-6 rounded shadow-md hover:shadow-lg';
+
+          expCard.innerHTML = `
+        <h4 class="text-2xl font-bold parkinsans-snype">${exp.title}</h4>
+        <p class="text-gray-600">${exp.company} | ${exp.from} - ${exp.to}</p>
+        <p class="mt-4 text-gray-600">${exp.desc}</p>
+      `;
+
+          experienceContainer.appendChild(expCard);
+        });
+      })
+      .catch(error => console.error('Error fetching experience.txt:', error));
+
+
+
+
+    // Fetch the content of the about file and append it to the "About Me" section
+    fetch('about.txt')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('about-content').innerText = data.trim();
+      })
+      .catch(error => {
+        console.error('Error fetching the about file:', error);
+      });
+
+
+
+    //fetch contact
+
+    fetch('./contact.txt')
+      .then(response => {
+        if (!response.ok) throw new Error('Failed to fetch contact.txt');
+        return response.text();
+      })
+      .then(data => {
+        const contactDetails = parseContactDetails(data);
+
+        // Dynamically update the contact section
+        const contactContainer = document.getElementById('contact-container');
+
+        // Create and append each contact detail
+        Object.keys(contactDetails).forEach(key => {
+          const value = contactDetails[key];
+
+          const contactElement = document.createElement('p');
+          contactElement.classList.add('text-gray-800', 'font-bold');
+
+          if (key === 'email') {
+            contactElement.innerHTML = `<strong>Email:</strong> <a href="mailto:${value}" class="text-blue-500">${value}</a>`;
+          } else if (key === 'phone') {
+            contactElement.innerHTML = `<strong>Phone:</strong> <a href="tel:${value}" class="text-blue-500">${value}</a>`;
+          } else {
+            contactElement.innerHTML = `<strong>${key.charAt(0).toUpperCase() + key.slice(1)}:</strong> ${value}`;
+          }
+
+          contactContainer.appendChild(contactElement);
+        });
+      })
+      .catch(error => console.error('Error loading contact.txt:', error));
+
+    // Function to parse the contact details from the file
+    function parseContactDetails(data) {
+      const contactDetails = {};
+      const lines = data.split('\n');
+
+      lines.forEach(line => {
+        const [key, value] = line.split(':').map(str => str.trim());
+        if (key && value) {
+          contactDetails[key.toLowerCase()] = value;
+        }
+      });
+
+      return contactDetails;
+    }
+
+
+
+  </script>
+
 </body>
 
 </html>
