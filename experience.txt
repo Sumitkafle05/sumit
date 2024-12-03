@@ -1,8 +1,14 @@
-title : Developer
-company: XYZ Ltd
-from : Jan 2020
-to : Dec 2021
-Worked on frontend and backend technologies. Worked on frontend and backend technologies.Worked on frontend and backend technologies.Worked on frontend and backend technologies.Worked on frontend and backend technologies.Worked on frontend and backend technologies.Worked on frontend and backend technologies.Worked on frontend and backend technologies.Worked on frontend and backend technologies.Worked on frontend and backend technologies.
+title : Project Coordinator 
+company: Smartpalika Pvt.Ltd. (Subsidiary of Cellapp Pvt.Ltd.) 
+from : May 2023
+to : till now
+Lead and manage comprehensive project initiatives, ensuring the successful implementation of innovative digital solutions.
+Collaborate with multidisciplinary teams to optimize project workflows, enhancing overall efficiency and productivity.
+Monitor project timelines and deliverables, proactively identifying and resolving challenges to maintain adherence to deadlines.
+Demonstrate proficiency in devising and executing strategic business plans, optimizing processes for maximum efficiency and seamless workflow execution.
+Serve as a communication focal point, bridging the gap between clients and project teams to facilitate understanding and collaboration.
+Cultivate expertise in external communication strategies, fostering valuable connections and partnerships to enhance inter-organizational collaboration.
+Leverage digital tools for survey administration and effectively manage volunteers, ensuring streamlined operations and successful project outcomes.
 
 title : Programmer
 company: Abc Ltd
