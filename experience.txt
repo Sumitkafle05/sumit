@@ -1,40 +1,41 @@
-title : Project Coordinator 
-company: Smartpalika Pvt.Ltd. (Subsidiary of Cellapp Pvt.Ltd.)
-from : May,2023
-to : Present
-desc : Lead and manage comprehensive project initiatives, ensuring the successful implementation of innovative digital solutions.
-Collaborate with multidisciplinary teams to optimize project workflows, enhancing overall efficiency and productivity.
-Monitor project timelines and deliverables, proactively identifying and resolving challenges to maintain adherence to deadlines.
-Demonstrate proficiency in devising and executing strategic business plans, optimizing processes for maximum efficiency and seamless workflow execution.
-Serve as a communication focal point, bridging the gap between clients and project teams to facilitate understanding and collaboration.
-Cultivate expertise in external communication strategies, fostering valuable connections and partnerships to enhance inter-organizational collaboration.
-Leverage digital tools for survey administration and effectively manage volunteers, ensuring streamlined operations and successful project outcomes.
+title : Developer
+company: XYZ Ltd
+from : Jan 2020
+to : Dec 2021
+Worked on frontend and backend technologies. Worked on frontend and backend technologies.Worked on frontend and backend technologies.Worked on frontend and backend technologies.Worked on frontend and backend technologies.Worked on frontend and backend technologies.Worked on frontend and backend technologies.Worked on frontend and backend technologies.Worked on frontend and backend technologies.Worked on frontend and backend technologies.
 
-title : HR Officer
-company: Cellapp Pvt.Ltd
-from : Janauary,2024
-to : Present
-desc :Establish HR policies that align with regulatory standards, ensuring compliance and risk mitigation.
-Initiate programs to improve employee retention, build leadership skills, and promote an inclusive work environment.
-Oversee recruitment and onboarding processes to attract and select top-tier talent.
-Address employee inquiries and provide support for HR-related issues, enhancing satisfaction and engagement.
-Work with management to align HR strategies with organizational goals and support the overall mission.
+title : Programmer
+company: Abc Ltd
+from : Jan 2021
+to : Mar 2023
+Worked on backend technologies.
 
-title : Finance officer
-company: Kakrebihar Prabidhik Shikshyalaya  
-from : September,2021
-to : March,2023
-desc :Collaborate seamlessly with Financial Managers and cross-functional team members to successfully execute various accounting tasks, ensuring cohesive financial operations.
-Maintain meticulous company ledgers and record daily financial transactions, demonstrating a keen eye for detail and accuracy in financial documentation.
-Proficiently create a variety of financial documents, including bills, invoices, pay-orders, payables, receivables, and purchase orders, contributing to the smooth functioning of financial processes.
-Identify discrepancies in ledgers and accounts, track them to their source, and implement corrective measures. Additionally, manage payroll activities, coordinate payment details with external service providers, and generate daily reports for both management and team members to ensure transparency and informed decision-making.
+title : Programmer
+company: Abc Ltd
+from : Jan 2021
+to : Mar 2023
+Worked on backend technologies.
 
-title : Assistant accountant
-company: smartpalikaaaaaa
-from : July,2019
-to : September,2021
-desc : Maintain precise records for daily transactions, ensuring accuracy and completeness in financial documentation.
-Prepare detailed balance sheets and generate monthly, quarterly, and annual financial reports, providing a comprehensive overview of the company's financial health.
-Manage calendars and schedule meetings efficiently, demonstrating organizational skills and contributing to seamless team coordination.
-Record accounts payable and accounts receivable, regularly updating internal systems with financial data. Additionally, reconcile bank statements to ensure financial accuracy and integrity.
+title : Programmer
+company: Abc Ltd
+from : Jan 2021
+to : Mar 2023
+Worked on backend technologies. Worked on backend technologies. Worked on backend technologies. Worked on backend technologies. Worked on backend technologies. Worked on backend technologies. Worked on backend technologies. Worked on backend technologies. Worked on backend technologies. Worked on backend technologies. Worked on backend technologies. Worked on backend technologies. Worked on backend technologies. Worked on backend technologies. Worked on backend technologies. Worked on backend technologies. Worked on backend technologies. Worked on backend technologies. Worked on backend technologies. Worked on backend technologies. Worked on backend technologies. Worked on backend technologies. Worked on backend technologies. Worked on backend technologies. Worked on backend technologies. Worked on backend technologies. Worked on backend technologies. Worked on backend technologies. 
 
+title : Programmer
+company: Abc Ltd
+from : Jan 2021
+to : Mar 2023
+Worked on backend technologies.
+
+title : Programmer
+company: Abc Ltd
+from : Jan 2021
+to : Mar 2023
+Worked on backend technologies.
+
+title : Programmer
+company: Abc Ltd
+from : Jan 2021
+to : Mar 2023
+Worked on backend technologies.

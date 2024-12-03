@@ -98,9 +98,11 @@
       <p class="text-lg text-gray-600 max-w-2xl mx-auto">
         <span class="typewriter parkinsans-snype">Project Coordinator | Finance & HR Expertise</span>
       </p>
-      <button class="mt-6 px-6 py-3 bg-blue-500 text-white font-bold rounded-full hover:bg-blue-600">
-        Download Resume
-      </button>
+      <a href="Resume.pdf" target="_blank">
+        <button class="mt-6 px-6 py-3 bg-blue-500 text-white font-bold rounded-full hover:bg-blue-600">
+          Download Resume
+        </button>
+      </a>
     </div>
   </section>
 
@@ -108,8 +110,8 @@
   <section id="about" class="py-20">
     <div class="container mx-auto">
       <h3 class="text-3xl font-bold mb-6 text-center parkinsans-snype-thick">ABOUT ME</h3>
-      <p class="text-gray-600 max-w-3xl mx-auto text-center" id="about-content">
-
+      <p class="text-gray-600 max-w-3xl mx-auto text-justify" id="about-content">
+        <!-- Dynamically inserted text will go here -->
       </p>
     </div>
   </section>
@@ -131,6 +133,7 @@
       <div id="experience-container" class="space-y-8"></div>
     </div>
   </section>
+  <!-- <script src="experience.js"></script> -->
 
   <!-- Contact Section -->
   <section id="contact" class="py-20 bg-gray-50">
@@ -145,167 +148,152 @@
   <!-- Footer -->
   <footer class="bg-gray-800 text-white py-6">
     <div class="container mx-auto text-center parkinsans-snype">
-      <p>&copy; 2024 Sumit Kafle. All Rights Reserved.</p><span title="">Powered By <a href="https://snyype.github.io"
-          target="_blank">snype</a></span>
+      <p>&copy; <span id="date"></span> Sumit Kafle. All Rights Reserved.</p><span title="">Powered
+        By <a href="https://snyype.github.io" target="_blank">snype</a></span>
     </div>
   </footer>
 
 
   <script>
 
-    // Fetch and process the skills.txt file
-    fetch('./skills.txt')
-      .then(response => response.text())
-      .then(data => {
-        const parseSkills = (skillsString) => {
-          const skills = [];
-          const entries = skillsString.trim().split(/\n\s*\n/); // Split blocks by blank lines
+    document.addEventListener("DOMContentLoaded", function () {
+      // Date
+      const getDateYear = () => {
+        const date = new Date().getFullYear();
+        document.getElementById('date').innerHTML = date;
+      };
+      getDateYear();
 
-          entries.forEach(entry => {
-            const lines = entry.split('\n');
-            const skill = {};
-            lines.forEach(line => {
-              const [key, value] = line.split(':').map(part => part.trim());
-              if (key && value) skill[key.toLowerCase()] = value;
+      // Fetch Skills
+      fetch('./skills.txt')
+        .then(response => response.text())
+        .then(data => {
+          const parseSkills = (skillsString) => {
+            const skills = [];
+            const entries = skillsString.trim().split(/\n\s*\n/);
+            entries.forEach(entry => {
+              const lines = entry.split('\n');
+              const skill = {};
+              lines.forEach(line => {
+                const [key, value] = line.split(':').map(part => part.trim());
+                if (key && value) skill[key.toLowerCase()] = value;
+              });
+              if (Object.keys(skill).length) skills.push(skill);
             });
-            if (Object.keys(skill).length) skills.push(skill);
+            return skills;
+          };
+
+          const skills = parseSkills(data);
+          const skillsContainer = document.getElementById('skills-container');
+          skills.forEach(skill => {
+            const skillCard = document.createElement('div');
+            skillCard.className = 'bg-white p-6 rounded shadow hover:shadow-lg';
+            skillCard.innerHTML = `
+          <h4 class="text-xl font-bold bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-blue-400 border border-blue-400">${skill.topic}</h4>
+          <h4 class="text-xl font-bold px-1">-------------------------------------------</h4>
+          <p class="text-gray-600 px-1">${skill['sub-topic']}</p>
+        `;
+            skillsContainer.appendChild(skillCard);
           });
+        })
+        .catch(error => console.error('Error fetching skills.txt:', error));
 
-          return skills;
-        };
+      fetch("experience.txt")
+        .then((response) => response.text())
+        .then((data) => {
+          // Normalize line breaks and split experiences
+          const normalizedData = data.replace(/\r\n/g, "\n").replace(/\r/g, "\n");
+          const experiences = normalizedData.split("\n\n");
 
-        const skills = parseSkills(data);
-        const skillsContainer = document.getElementById('skills-container');
+          const experienceContainer = document.getElementById("experience-container");
+          experiences.forEach((experience) => {
+            if (!experience.trim()) return; // Skip empty entries
 
-        skills.forEach(skill => {
-          const skillCard = document.createElement('div');
-          skillCard.className = 'bg-white p-6 rounded shadow hover:shadow-lg';
+            const lines = experience.split("\n").map((line) => line.trim());
+            let title = "",
+              company = "",
+              from = "",
+              to = "",
+              desc = "";
 
-          skillCard.innerHTML = `
-            <h4 class="text-xl font-bold bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-blue-400 border border-blue-400">${skill.topic}</h4>
-            <h4 class="text-xl font-bold px-1">-----------------------------------------</h4>
-            <p class="text-gray-600 px-1">${skill['sub-topic']}</p>
-          `;
+            if (lines.length >= 2 && lines[1].includes("|")) {
+              // Handle the first format
+              title = lines[0];
+              const [, comp, start, end] = lines[1].match(/^(.*) \| (.*) - (.*)$/) || [];
+              company = comp || "";
+              from = start || "";
+              to = end || "";
+              desc = lines.slice(2).join(" ");
+            } else if (lines.some((line) => line.startsWith("title :"))) {
+              // Handle the second format
+              lines.forEach((line) => {
+                if (line.startsWith("title :")) title = line.replace("title :", "").trim();
+                else if (line.startsWith("company:")) company = line.replace("company:", "").trim();
+                else if (line.startsWith("from :")) from = line.replace("from :", "").trim();
+                else if (line.startsWith("to :")) to = line.replace("to :", "").trim();
+                else desc += `${line} `;
+              });
+            }
 
-          skillsContainer.appendChild(skillCard);
-        });
-      })
-      .catch(error => console.error('Error fetching skills.txt:', error));
-
-
-
-
-    ///experience
-
-    fetch('./experience.txt')
-      .then(response => {
-        if (!response.ok) throw new Error(`Network response was not ok: ${response.statusText}`);
-        return response.text();
-      })
-      .then(data => {
-        // console.log('Raw experience data:', data); // Debug raw file content
-
-        const parseExperience = (expString) => {
-          const experiences = [];
-          const entries = expString.trim().split(/\n\s*\n/); // Split blocks by blank lines
-          // console.log('Entries:', entries); // Debug parsed blocks
-
-          entries.forEach(entry => {
-            const lines = entry.split('\n');
-            const experience = {};
-            lines.forEach(line => {
-              const [key, value] = line.split(':').map(part => part.trim());
-              if (key && value) experience[key.toLowerCase()] = value;
-            });
-            // console.log('Parsed experience:', experience); // Debug each parsed experience
-            if (Object.keys(experience).length) experiences.push(experience);
-          });
-
-          return experiences;
-        };
-
-        const experiences = parseExperience(data);
-        // console.log('Parsed experiences:', experiences); // Debug final parsed array
-
-        const experienceContainer = document.getElementById('experience-container');
-
-        experiences.forEach(exp => {
-          const expCard = document.createElement('div');
-          expCard.className = 'bg-white p-6 rounded shadow-md hover:shadow-lg';
-
-          expCard.innerHTML = `
-        <h4 class="text-2xl font-bold parkinsans-snype">${exp.title}</h4>
-        <p class="text-gray-600">${exp.company} | ${exp.from} - ${exp.to}</p>
-        <p class="mt-4 text-gray-600">${exp.desc}</p>
+            // Create experience block
+            const experienceBlock = document.createElement("div");
+            experienceBlock.classList.add("mb-6", "p-4", "bg-gray-100", "rounded");
+            experienceBlock.innerHTML = `
+        <h4 class="text-xl font-semibold">${title}</h4>
+        <p class="text-gray-600 italic">${company} | ${from} - ${to}</p>
+        <p class="text-gray-700 mt-4">${desc.trim()}</p>
       `;
-
-          experienceContainer.appendChild(expCard);
+            experienceContainer.appendChild(experienceBlock);
+          });
+        })
+        .catch((error) => {
+          console.error("Error fetching experience.txt:", error);
         });
-      })
-      .catch(error => console.error('Error fetching experience.txt:', error));
 
 
 
+      // Fetch About
+      fetch('about.txt')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('about-content').innerText = data.trim();
+        })
+        .catch(error => console.error('Error fetching about.txt:', error));
 
-    // Fetch the content of the about file and append it to the "About Me" section
-    fetch('about.txt')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('about-content').innerText = data.trim();
-      })
-      .catch(error => {
-        console.error('Error fetching the about file:', error);
-      });
+      // Fetch Contact
+      fetch('./contact.txt')
+        .then(response => response.text())
+        .then(data => {
+          const parseContactDetails = (data) => {
+            const contactDetails = {};
+            const lines = data.split('\n');
+            lines.forEach(line => {
+              const [key, value] = line.split(':').map(str => str.trim());
+              if (key && value) {
+                contactDetails[key.toLowerCase()] = value;
+              }
+            });
+            return contactDetails;
+          };
 
-
-
-    //fetch contact
-
-    fetch('./contact.txt')
-      .then(response => {
-        if (!response.ok) throw new Error('Failed to fetch contact.txt');
-        return response.text();
-      })
-      .then(data => {
-        const contactDetails = parseContactDetails(data);
-
-        // Dynamically update the contact section
-        const contactContainer = document.getElementById('contact-container');
-
-        // Create and append each contact detail
-        Object.keys(contactDetails).forEach(key => {
-          const value = contactDetails[key];
-
-          const contactElement = document.createElement('p');
-          contactElement.classList.add('text-gray-800', 'font-bold');
-
-          if (key === 'email') {
-            contactElement.innerHTML = `<strong>Email:</strong> <a href="mailto:${value}" class="text-blue-500">${value}</a>`;
-          } else if (key === 'phone') {
-            contactElement.innerHTML = `<strong>Phone:</strong> <a href="tel:${value}" class="text-blue-500">${value}</a>`;
-          } else {
-            contactElement.innerHTML = `<strong>${key.charAt(0).toUpperCase() + key.slice(1)}:</strong> ${value}`;
-          }
-
-          contactContainer.appendChild(contactElement);
-        });
-      })
-      .catch(error => console.error('Error loading contact.txt:', error));
-
-    // Function to parse the contact details from the file
-    function parseContactDetails(data) {
-      const contactDetails = {};
-      const lines = data.split('\n');
-
-      lines.forEach(line => {
-        const [key, value] = line.split(':').map(str => str.trim());
-        if (key && value) {
-          contactDetails[key.toLowerCase()] = value;
-        }
-      });
-
-      return contactDetails;
-    }
+          const contactDetails = parseContactDetails(data);
+          const contactContainer = document.getElementById('contact-container');
+          Object.keys(contactDetails).forEach(key => {
+            const value = contactDetails[key];
+            const contactElement = document.createElement('p');
+            contactElement.classList.add('text-gray-800', 'font-bold');
+            if (key === 'email') {
+              contactElement.innerHTML = `<strong>Email:</strong> <a href="mailto:${value}" class="text-blue-500">${value}</a>`;
+            } else if (key === 'phone') {
+              contactElement.innerHTML = `<strong>Phone:</strong> <a href="tel:${value}" class="text-blue-500">${value}</a>`;
+            } else {
+              contactElement.innerHTML = `<strong>${key.charAt(0).toUpperCase() + key.slice(1)}:</strong> ${value}`;
+            }
+            contactContainer.appendChild(contactElement);
+          });
+        })
+        .catch(error => console.error('Error loading contact.txt:', error));
+    });
 
 
 
