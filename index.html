@@ -235,13 +235,14 @@
               });
             }
 
-            // Create experience block
-            const experienceBlock = document.createElement("div");
+            // Create experience block with collapsible details
+            const experienceBlock = document.createElement("details");
             experienceBlock.classList.add("mb-6", "p-4", "bg-gray-100", "rounded");
             experienceBlock.innerHTML = `
-        <h4 class="text-xl font-semibold">${title}</h4>
-        <p class="text-gray-600 italic">${company} | ${from} - ${to}</p>
-        <p class="text-gray-700 mt-4">${desc.trim()}</p>
+        <summary class="text-xl font-semibold">${title} (${company} | ${from} - ${to})</summary>
+        <div class="mt-4">
+          <p class="text-gray-700">${desc.trim()}</p>
+        </div>
       `;
             experienceContainer.appendChild(experienceBlock);
           });
@@ -249,7 +250,6 @@
         .catch((error) => {
           console.error("Error fetching experience.txt:", error);
         });
-
 
 
       // Fetch About
