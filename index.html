@@ -12,6 +12,34 @@
     href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Parkinsans:wght@300..800&display=swap"
     rel="stylesheet">
   <style>
+    .class-body {
+      background: linear-gradient(90deg, #2b37b4, #ff758c, #d75e5e);
+    }
+
+    .border-snype {
+      border: 2px solid transparent;
+      border-radius: 7px;
+      border-image: linear-gradient(90deg, #684fd8, #dd6176, #e33b3b) 1;
+      clip-path: inset(0 round 5px);
+    }
+
+
+    .title-gradient {
+      background: linear-gradient(90deg, #170664, #923746, #8e0909);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: bold;
+    }
+
+    .snype-gradient {
+      /* background: linear-gradient(90deg, #684fd8, #dd6176, #e33b3b); */
+      background-clip: text !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+      font-weight: bold !important;
+    }
+
     .parkinsans-snype-thick {
       font-family: "Parkinsans", sans-serif;
       font-optical-sizing: auto;
@@ -24,6 +52,10 @@
       font-optical-sizing: auto;
       font-weight: 100;
       font-style: bold;
+    }
+
+    .download-btn {
+      background: linear-gradient(90deg, #170664, #923746, #8e0909);
     }
 
 
@@ -70,7 +102,7 @@
       border-right: 2px solid black;
       white-space: nowrap;
       font-family: monospace;
-      animation: typewriter 4s steps(30, end), blink 0.75s step-end infinite;
+      animation: typewriter 6s steps(30, end), blink 0.75s step-end infinite;
     }
   </style>
 </head>
@@ -79,13 +111,14 @@
   <!-- Header -->
   <header class="bg-white shadow-md sticky top-0 z-50">
     <div class="container mx-auto flex justify-between items-center py-4 px-6">
-      <h1 class="text-2xl font-bold text-gray-800 parkinsans-snype-thick">Sumit Kafle</h1>
+      <h1 class="text-2xl font-bold text-gray-800 parkinsans-snype-thick title-gradient">Sumit Kafle</h1>
       <nav>
         <ul class="flex space-x-6">
-          <li><a href="#about" class="hover:text-blue-500 parkinsans-snype-thick">About</a></li>
-          <li><a href="#skills" class="hover:text-blue-500 parkinsans-snype-thick">Skills</a></li>
-          <li><a href="#experience" class="hover:text-blue-500 parkinsans-snype-thick">Experience</a></li>
-          <li><a href="#contact" class="hover:text-blue-500 parkinsans-snype-thick">Contact</a></li>
+          <li><a href="#about" class="hover:text-blue-500 parkinsans-snype-thick title-gradient">About</a></li>
+          <li><a href="#skills" class="hover:text-blue-500 parkinsans-snype-thick title-gradient">Skills</a></li>
+          <li><a href="#experience" class="hover:text-blue-500 parkinsans-snype-thick title-gradient">Experience</a>
+          </li>
+          <li><a href="#contact" class="hover:text-blue-500 parkinsans-snype-thick title-gradient">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -94,23 +127,26 @@
   <!-- Hero Section -->
   <section class="bg-gray-100 py-20 text-center fade-in">
     <div class="container mx-auto">
-      <h2 class="text-4xl font-extrabold mb-4 parkinsans-snype">Empowering Organizations</h2>
-      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+      <h2 class="text-4xl font-extrabold mb-4 parkinsans-snype title-gradient">Empowering Organizations</h2>
+      <div class="text-lg text-gray-600">
         <span class="typewriter parkinsans-snype">Project Coordinator | Finance & HR Expertise</span>
-      </p>
-      <a href="Resume.pdf" target="_blank">
-        <button class="mt-6 px-6 py-3 bg-blue-500 text-white font-bold rounded-full hover:bg-blue-600">
-          Download Resume
-        </button>
-      </a>
+      </div>
+      <div>
+
+        <a href="Resume.pdf" target="_blank">
+          <button class="mt-6 px-6 py-3 bg-blue-500 text-white font-bold rounded-full hover:bg-blue-600 download-btn">
+            Download Resume
+          </button>
+        </a>
+      </div>
     </div>
   </section>
 
   <!-- About Section -->
-  <section id="about" class="py-20">
+  <section id="about" class="py-20 class-body">
     <div class="container mx-auto">
-      <h3 class="text-3xl font-bold mb-6 text-center parkinsans-snype-thick">ABOUT ME</h3>
-      <p class="text-gray-600 max-w-3xl mx-auto text-justify" id="about-content">
+      <h3 class="text-3xl font-bold mb-6 text-center parkinsans-snype-thick text-white">ABOUT ME</h3>
+      <p class="text-white max-w-3xl mx-auto text-justify" id="about-content">
         <!-- Dynamically inserted text will go here -->
       </p>
     </div>
@@ -119,7 +155,7 @@
   <!-- Skills Section -->
   <section id="skills" class="bg-gray-100 py-20">
     <div class="container mx-auto">
-      <h3 class="text-3xl font-bold mb-6 text-center parkinsans-snype-thick">SKILLS</h3>
+      <h3 class="text-3xl font-bold mb-6 text-center parkinsans-snype-thick title-gradient">SKILLS</h3>
       <div id="skills-container" class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <!-- Dynamic Skill Cards Will Be Injected Here -->
       </div>
@@ -129,7 +165,7 @@
   <!-- Experience Section -->
   <section id="experience" class="py-20">
     <div class="container mx-auto">
-      <h3 class="text-3xl font-bold mb-6 text-center parkinsans-snype-thick">PROFESSIONAL EXPERIENCE</h3>
+      <h3 class="text-3xl font-bold mb-6 text-center parkinsans-snype-thick title-gradient">PROFESSIONAL EXPERIENCE</h3>
       <div id="experience-container" class="space-y-8"></div>
     </div>
   </section>
@@ -138,7 +174,7 @@
   <!-- Contact Section -->
   <section id="contact" class="py-20 bg-gray-50">
     <div class="container mx-auto text-center">
-      <h3 class="text-3xl font-bold mb-6 parkinsans-snype-thick">CONTACT INFORMATION</h3>
+      <h3 class="text-3xl font-bold mb-6 parkinsans-snype-thick title-gradient">CONTACT INFORMATION</h3>
       <p class="text-gray-600 mb-6 parkinsans-snype">Feel free to reach out via email or phone.</p>
       <div id="contact-container" class="space-y-4 parkinsans-snype"></div>
       <!-- This will hold dynamic content -->
@@ -148,13 +184,31 @@
   <!-- Footer -->
   <footer class="bg-gray-800 text-white py-6">
     <div class="container mx-auto text-center parkinsans-snype">
-      <p>&copy; <span id="date"></span> Sumit Kafle. All Rights Reserved.</p><span title="">Powered
-        By <a href="https://snyype.github.io" target="_blank">snype</a></span>
+      <p>&copy; <span id="date"></span> Sumit Kafle. All Rights Reserved.</p><span title="">Developed
+        By <a href="https://github.com/snyype" target="_blank" title="snypeatwork@gmail.com"><span id="gradient-text"
+            class="snype-gradient">SnYpe</span></a></span>
     </div>
   </footer>
 
 
   <script>
+
+    //start css random gradiant
+    const gradients = [
+      "linear-gradient(90deg, #684fd8, #dd6176, #e33b3b)",
+      "linear-gradient(90deg, #1abc9c, #16a085, #2ecc71)",
+      "linear-gradient(90deg, #3498db, #9b59b6, #8e44ad)",
+      "linear-gradient(90deg, #e74c3c, #e67e22, #f1c40f)",
+      "linear-gradient(90deg, #ff9a9e, #fad0c4, #fbc2eb)"
+    ];
+
+    // Select a random gradient from the array
+    const randomGradient = gradients[Math.floor(Math.random() * gradients.length)];
+
+    // Apply the random gradient to the text element's background
+    const textElement = document.getElementById('gradient-text');
+    textElement.style.background = randomGradient;
+    //end css random gradiant
 
     document.addEventListener("DOMContentLoaded", function () {
       // Date
@@ -189,8 +243,7 @@
             const skillCard = document.createElement('div');
             skillCard.className = 'bg-white p-6 rounded shadow hover:shadow-lg';
             skillCard.innerHTML = `
-          <h4 class="text-xl font-bold bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-blue-400 border border-blue-400">${skill.topic}</h4>
-          <h4 class="text-xl font-bold px-1">-------------------------------------------</h4>
+          <h4 class="text-xl font-bold bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-blue-400 border border-snype title-gradient">${skill.topic}</h4>
           <p class="text-gray-600 px-1">${skill['sub-topic']}</p>
         `;
             skillsContainer.appendChild(skillCard);
