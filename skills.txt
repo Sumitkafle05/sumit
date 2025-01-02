@@ -26,7 +26,7 @@ sub-topic:Strong background in social initiatives, fundraising, and volunteer ma
 topic: Analytical Thinking
 sub-topic: Capable of interpreting data to drive strategic decisions and solve complex problems.
 
-topic:Stakeholder CollaborationEx
+topic:Stakeholder Collaboration
 sub-topic: Epert in facilitating collaboration between clients, teams, and management.
 
 topic:Lifelong Learner
